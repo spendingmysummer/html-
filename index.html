@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <hl> Nino Refayandy</hl>
+  <!-- The <hl> tag is invalid. Use <h1> for headings -->
   <meta charset="UTF-8">
-  <title>silly cat images</title>
+  <title>Silly Cat Images</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -36,6 +36,7 @@
       width: 250px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       transition: transform 0.2s;
+      position: relative;
     }
     .cat-card:hover {
       transform: scale(1.07) rotate(-3deg);
@@ -49,10 +50,65 @@
       font-size: 1.15rem;
       color: #c71585;
     }
+    .remove-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #ff69b4;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      transition: background 0.2s;
+    }
+    .remove-btn:hover {
+      background: #c71585;
+    }
+    .add-form {
+      margin: 2rem 0;
+      background: #fffafa;
+      padding: 1rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: inline-block;
+    }
+    .add-form input, .add-form textarea {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ffb6c1;
+      width: 90%;
+      font-size: 1rem;
+    }
+    .add-form button {
+      background: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+    .add-form button:hover {
+      background: #c71585;
+    }
     footer {
       margin: 3rem 0 1rem 0;
       color: #888;
       font-size: 1rem;
+    }
+    .creator {
+      font-size: 1rem;
+      color: #c71585;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -60,28 +116,21 @@
   <header>
     Welcome to Silly Cats Galore!
   </header>
-  <section class="cat-gallery">
-    <div class="cat-card">
-      <img src="https://placekitten.com/250/180" alt="Silly Cat 1">
-      <div class="caption">"I fits, I sits."</div>
-    </div>
-    <div class="cat-card">
-      <img src="https://placekitten.com/251/180" alt="Silly Cat 2">
-      <div class="caption">"Did someone say tuna?"</div>
-    </div>
-    <div class="cat-card">
-      <img src="https://placekitten.com/252/180" alt="Silly Cat 3">
-      <div class="caption">"I knocked over your plant for science."</div>
-    </div>
-    <div class="cat-card">
-      <img src="https://placekitten.com/253/180" alt="Silly Cat 4">
-      <div class="caption">"Keyboard? More like napboard."</div>
-    </div>b
+  <div class="creator">
+    Created by Nino Refayandy
+  </div>
+  <form class="add-form" id="addCatForm">
+    <h2>Add a Silly Cat</h2>
+    <input type="url" id="catUrl" placeholder="Image URL (e.g., https://placekitten.com/260/180)" required><br>
+    <textarea id="catCaption" placeholder="Funny caption" required rows="2"></textarea><br>
+    <button type="submit">Add Cat</button>
+  </form>
+  <section class="cat-gallery" id="catGallery">
+    <!-- Cat cards will be rendered here by JS -->
   </section>
   <footer>
     &copy; 2025 Silly Cats Galore. Meow!
   </footer>
-  <script src="script.js></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
