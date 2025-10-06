@@ -1,1 +1,84 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Silly Cats Galore!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #ffe4e1;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #444;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #ffb6c1;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .cat-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .cat-card {
+      background: #fffafa;
+      border: 2px dashed #ff69b4;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .cat-card:hover {
+      transform: scale(1.07) rotate(-3deg);
+    }
+    .cat-card img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .caption {
+      margin-top: 1rem;
+      font-size: 1.15rem;
+      color: #c71585;
+    }
+    footer {
+      margin: 3rem 0 1rem 0;
+      color: #888;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Welcome to Silly Cats Galore!
+  </header>
+  <section class="cat-gallery">
+    <div class="cat-card">
+      <img src="https://placekitten.com/250/180" alt="Silly Cat 1">
+      <div class="caption">"I fits, I sits."</div>
+    </div>
+    <div class="cat-card">
+      <img src="https://placekitten.com/251/180" alt="Silly Cat 2">
+      <div class="caption">"Did someone say tuna?"</div>
+    </div>
+    <div class="cat-card">
+      <img src="https://placekitten.com/252/180" alt="Silly Cat 3">
+      <div class="caption">"I knocked over your plant for science."</div>
+    </div>
+    <div class="cat-card">
+      <img src="https://placekitten.com/253/180" alt="Silly Cat 4">
+      <div class="caption">"Keyboard? More like napboard."</div>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Silly Cats Galore. Meow!
+  </footer>
+</body>
+</html>
