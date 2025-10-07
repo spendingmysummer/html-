@@ -1,4 +1,4 @@
-<button id="sapabutton">Sapa Saya</button>
+<button id="sapabutton">hi</button>
 
 <script>
   const tombolSapa = document.getElementById('sapabutton');
