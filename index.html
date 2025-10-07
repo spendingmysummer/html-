@@ -1,135 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Silly Cat Images</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background: #ffe4e1;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: #444;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: #ffb6c1;
-      padding: 2rem 0;
-      font-size: 2.5rem;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .cat-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    .cat-card {
-      background: #fffafa;
-      border: 2px dashed #ff69b4;
-      border-radius: 20px;
-      padding: 1rem;
-      width: 250px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-      position: relative;
-    }
-    .cat-card:hover {
-      transform: scale(1.07) rotate(-3deg);
-    }
-    .cat-card img {
-      width: 100%;
-      border-radius: 15px;
-    }
-    .caption {
-      margin-top: 1rem;
-      font-size: 1.15rem;
-      color: #c71585;
-    }
-    .remove-btn {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: #ff69b4;
-      border: none;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 1.1rem;
-      cursor: pointer;
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
-      transition: background 0.2s;
-    }
-    .remove-btn:hover {
-      background: #c71585;
-    }
-    .add-form {
-      margin: 2rem 0;
-      background: #fffafa;
-      padding: 1rem 2rem;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      display: inline-block;
-    }
-    .add-form input, .add-form textarea {
-      margin: 0.5rem 0;
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 1px solid #ffb6c1;
-      width: 90%;
-      font-size: 1rem;
-    }
-    .add-form button {
-      background: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 0.5rem;
-      transition: background 0.2s;
-    }
-    .add-form button:hover {
-      background: #c71585;
-    }
-    footer {
-      margin: 3rem 0 1rem 0;
-      color: #888;
-      font-size: 1rem;
-    }
-    .creator {
-      font-size: 1rem;
-      color: #c71585;
-      margin-top: -1rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    Welcome to Silly Cats Galore!
-  </header>
-  <div class="creator">
-    Created by Nino Refayandy
+  <div class="card-profile">
+    <img src="https://i.pinimg.com/736x/6c/e8/da/6ce8dad3307644c26bddc34ebf4785f0.jpg" />
+    <h2>Nino Refayandy</h2>
+    <p>i'm from SMAN 1 KANDAT</p>
   </div>
-  <form class="add-form" id="addCatForm">
-    <h2>Add a Silly Cat</h2>
-    <input type="url" id="catUrl" placeholder="Image URL (e.g., https://placekitten.com/260/180)" required><br>
-    <textarea id="catCaption" placeholder="Funny caption" required rows="2"></textarea><br>
-    <button type="submit">Add Cat</button>
-  </form>
-  <section class="cat-gallery" id="catGallery">
-    <!-- Cat cards will be rendered here by JS -->
-  </section>
-  <footer>
-    &copy; 2025 Silly Cats Galore. Meow!
-  </footer>
-  <script src="script.js"></script>
 </body>
 </html>
+
